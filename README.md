@@ -1,1 +1,1 @@
-# hoshinomegami.github.io
+# http://hoshinomegami.github.io
