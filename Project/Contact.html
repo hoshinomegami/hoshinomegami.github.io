@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Contact Us</title>
+  <style>
+      body {
+          font-family: Arial, sans-serif;
+          background: #f8f9fa;
+          margin: 0;
+          padding: 0;
+          text-align: center;
+      }
+      header {
+          background: linear-gradient(to top, powderblue, #333);
+          color: white;
+          padding: 15px;
+      }
+      nav.top-nav a {
+          margin: 0 15px;
+          text-decoration: none;
+          color: #333;
+          font-weight: bold;
+      }
+      main {
+          padding: 20px;
+          max-width: 800px;
+          margin: 0 auto;
+          text-align: left;
+          background: #fff;
+          border-radius: 5px;
+          box-shadow: 0 0 10px rgba(0,0,0,0.2);
+      }
+      h2 {
+          margin-top: 0;
+      }
+      footer {
+          background: linear-gradient(to top, #333, powderblue);
+          color: white;
+          padding: 10px;
+          text-align: center;
+      }
+      nav.bottom-nav a {
+          margin: 0 15px;
+          text-decoration: none;
+          color: #fff;
+          font-weight: bold;
+      }
+      .contact-info p {
+          margin: 0.5em 0;
+      }
+      form label {
+          display: block;
+          margin-top: 1em;
+          font-weight: bold;
+      }
+      form input[type="email"],
+      form textarea {
+          width: 100%;
+          padding: 8px;
+          margin-top: 0.5em;
+          box-sizing: border-box;
+          border-radius: 4px;
+          border: 1px solid #ccc;
+      }
+      form button {
+          margin-top: 1em;
+          padding: 10px 20px;
+          background-color: #333;
+          color: #fff;
+          border: none;
+          border-radius: 4px;
+          cursor: pointer;
+      }
+      form button:hover {
+          background-color: #444;
+      }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Contact Us</h1>
+  </header>
+
+  <!-- Top Nav -->
+  <br/>
+  <nav class="top-nav">
+    <a href="Iceland.html">Home</a> |
+    <a href="Hiking.html">Hiking</a> |
+    <a href="NorthernLights.html">Northern Lights</a> |
+    <a href="Contact.html">Contact</a>
+  </nav>
+  <br/>
+
+  <main>
+    <h2>Contact Information</h2>
+    <div class="contact-info">
+      <p><strong>General Info Phone:</strong> 1(800)-999-9999</p>
+      <p><strong>General Email:</strong> <a href="mailto:info@iceland.com">info@iceland.com</a></p>
+      <p><strong>Glacier Tours Email:</strong> <a href="mailto:tours@iceland.com">tours@iceland.com</a></p>
+      <p><strong>Aurora Tours Phone:</strong> 1(800)-123-4567</p>
+      <p><strong>Aurora Tours Email:</strong> <a href="mailto:aurora@iceland.com">aurora@iceland.com</a></p>
+    </div>
+
+    <br/><hr/><br/>
+
+    <h2>Suggestions / Email Box</h2>
+    <form action="mailto:info@iceland.com" method="post" enctype="text/plain">
+      <label for="email">Your Email:</label>
+      <input type="email" id="email" name="email" placeholder="name@example.com" required>
+
+      <label for="message">Your Message:</label>
+      <textarea id="message" name="message" rows="5" placeholder="Type your message here..."></textarea>
+
+      <button type="submit">Send</button>
+    </form>
+  </main>
+  <br/>
+
+  <footer>
+    <nav class="bottom-nav">
+      <br/>
+      <a href="Iceland.html">Home</a> |
+      <a href="Hiking.html">Hiking</a> |
+      <a href="NorthernLights.html">Northern Lights</a> |
+      <a href="Contact.html">Contact</a>
+    </nav>
+    <br/>
+    <h6>Project 1 by Emmanoelle Aguilar</h6>
+    <h6>&copy; 2025 ET710 Project 1 Website. All rights reserved.</h6>
+  </footer>
+</body>
+</html>

@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Iceland</title>
+    <style>
+        /* Global Reset & Basic Styling */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: Arial, sans-serif;
+            background: #f8f9fa; /* Subtle background color for a sleeker look */
+            margin: 0;
+            padding: 0;
+            text-align: center;
+        }
+
+        /* Header with two images + centered heading */
+        header {
+            background: linear-gradient(to top, powderblue, #333);
+            color: white;
+            padding: 15px;
+            display: flex;               /* Use flex layout */
+            align-items: center;         /* Vertically center items */
+            justify-content: space-between; /* Left image on left, right image on right */
+        }
+        header h1 {
+            margin: 0;
+            text-align: center;
+            flex: 1; /* let heading expand in the middle */
+        }
+        .header-img {
+            width: 80px;  /* adjust as needed */
+            height: auto;
+        }
+
+        /* Top nav */
+        nav.top-nav {
+            margin: 10px 0;
+        }
+        nav.top-nav a {
+            margin: 0 15px;
+            text-decoration: none;
+            color: #333;
+            font-weight: bold;
+        }
+
+        /* Main content area */
+        main {
+            padding: 20px;
+            max-width: 1000px;
+            margin: 0 auto; 
+            text-align: left; 
+        }
+
+        /* Pink Container with a salmon gradient, black border, white text */
+        .pink-container {
+            /* Three-stop gradient: top salmon (#e9967a), lighter salmon (#feb9a0), bottom salmon (#e9967a) */
+            background: linear-gradient(to bottom, pink 0%, palevioletred 50%,  salmon 100%);
+            border: 2px solid black;
+            padding: 20px;
+            margin-bottom: 20px;
+            color: white; /* white font color inside */
+            border-radius: 5px; /* a bit sleeker look */
+            box-shadow: 0 0 10px rgba(0,0,0,0.2); /* subtle shadow */
+        }
+        .pink-container h2 {
+            margin-top: 0;
+        }
+        /* Blue border for images inside pink-container */
+        .pink-container figure img {
+            border: 3px solid blue;
+            border-radius: 3px;
+        }
+        figure {
+            margin: 1em 0;
+            text-align: center;
+        }
+        figure figcaption {
+            font-style: italic;
+        }
+        .newsfeed p {
+            margin-left: 40px;
+        }
+        ul.indent {
+            margin-left: 40px;
+        }
+        /* Table */
+        table {
+            margin: 1em 0;
+            border-collapse: separate;
+            border-spacing: 0;
+            width: 80%;
+            border: 2px solid #000;
+        }
+        th, td {
+            border: 1px solid white;
+            padding: 8px;
+            text-align: left;
+        }
+        #contact-section {
+            margin-left: 40px; /* pushes content to the right */
+            margin-right: 40px; /* optional, to keep it narrower */
+        }
+        /* Footer with gradient to bottom */
+        footer {
+            background: linear-gradient(to top, #333, powderblue);
+            color: white;
+            padding: 10px;
+            text-align: center;
+        }
+        nav.bottom-nav a {
+            margin: 0 15px;
+            text-decoration: none;
+            color: #fff;  
+            font-weight: bold;
+        }
+        .contact-icon {
+            width: 20px;
+            height: 20px;
+            vertical-align: middle; /* aligns icon with text */
+            margin-right: 5px;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header with images on left & right, heading centered -->
+    <header>
+        <img src="images/logos/left_logo.png" alt="Left Logo" class="header-img">
+        <h1>Welcome to Iceland!</h1>
+        <img src="images/logos/right_logo.png" alt="Right Logo" class="header-img">
+    </header>
+
+    <!-- Top Navigation -->
+    <nav class="top-nav">
+        <a href="Iceland.html">Home</a> |
+        <a href="Hiking.html">Hiking</a> |
+        <a href="NorthernLights.html">Northern Lights</a> |
+        <a href="#contact-section">Contact</a>
+    </nav>
+
+    <!-- Main Content -->
+    <main>
+        <div class="intro">
+            <h1 style="text-align:center;">Iceland</h1>
+            <br/>
+            <p>
+                <strong><em>Iceland</em></strong> is a country of sharp contrasts. A place where fire and 
+                ice co-exist. Where dark winters are offset by the summer’s 
+                <abbr title="Midnight Sun (continuous daylight)">midnight sun</abbr>. A country where insular
+                 existence has spurred a rich and vibrant culture.
+            </p>
+            <br/>
+        </div>
+
+        <!-- Pink Container: Things to do -->
+        <div class="pink-container">
+            <h2>Things to do in Iceland</h2>
+
+            <article>
+                <figure>
+                    <img src="images/photos/northern_lights.jpg" 
+                         alt="Northern Lights in Iceland" 
+                         title="Northern Lights" 
+                         width="400">
+                    <figcaption>Northern Lights in Iceland</figcaption>
+                </figure>
+                <p>
+                    The Aurora Borealis takes its name from the Roman goddess of dawn, Aurora, 
+                    and the Greek name for the north wind, Boreas. From September to April, Iceland
+                    is a hotspot for this magnificent lightshow.<br/>
+                    The Aurora Borealis, more commonly referred to as the Northern Lights, is a natural
+                    phenomenon created when particles emitted by the sun interact with the atmosphere
+                    in the Earth&#39;s magnetic field. This releases energy, causing peculiar luminous 
+                    green streaks across the skies.
+                </p>
+            </article>
+
+            <article>
+                <figure>
+                    <img src="images/photos/glacier_hiking.jpg" 
+                         alt="Glacier Hiking in Iceland" 
+                         title="Glacier Hiking" 
+                         width="400">
+                    <figcaption>Ice climbing &amp; hiking on glaciers</figcaption>
+                </figure>
+                <p>
+                    When making a trip to Iceland, it is hard not to pay special attention to the country&#39;s
+                    namesake—namely, its 4,500 square miles of glaciers. Ice climbing on the glaciers is 
+                    practiced year-round and takes place mainly on the <span title="Sólheimajökull means &#39;Sun Home Glacier&#39; in Icelandic.">Sólheimajökull</span> 
+                    and <span title="Svínafellsjökull means &#39;Pig Mountain Glacier&#39; in Icelandic.">Svínafellsjökull</span> glaciers in the 
+                    south of Iceland, to which day trips are offered from <span title="The capital city of Iceland, often abbreviated RVK.">Reykjavík</span> (and 
+                    <span title="Skaftafell means &#39;the hill/mountain of Skafta,&#39; referencing the nearby Skaftá River.">Skaftafell</span>).
+                </p>
+            </article>
+        </div>
+
+        <!-- Upcoming Events -->
+        <div class="events">
+            <h2>Upcoming Events</h2>
+            <br/>
+            <ul class="indent">
+                <li><a href="">Eistnaflug Rock Festival</a></li>
+                <li><a href="">Laugavegur Ultra Marathon</a></li>
+            </ul>
+        </div>
+
+        <!-- Newsfeed -->
+        <br/><hr/><br/>
+        <div class="newsfeed">
+            <h2>Newsfeed</h2>
+            <br/>
+            <h4>Norse mythology published as divination cards</h4>
+            <p class="newsfeed p">
+                Llewellyn Publications will be publishing 81-card divination deck bringing the wisdom of
+                Norse mythology to life.
+            </p>
+            <h4><em>Hollywood Reporter says Sena Daly gives Icelandic director Einar Aðalsteins 
+            rave reviews</em></h4> 
+            <p class="newsfeed p">
+                End of Sentence, by director Elfar Aðalsteins, receives very positive reviews in leading
+                film industry magazines such as Hollywood. The film&#39;s two leading actors, John Hawkes
+                and Logan Lerman, are also praised in both reviews. Hawkes has quite a few films
+                under his belt and was nominated for an Oscar for Winter&#39;s Bone and young Lerman is best
+                known for his role in The Perks of Being a Wallflower. Icelandic actor Ólafur Darri 
+                Ólafsson also has a small part in End of Sentence.
+            </p>
+        </div>
+
+        <!-- Table for trip cost -->
+        <br/><hr/><br/>
+        <div class="trip-cost">
+            <h2>How Much Does an Iceland Trip Cost?</h2>
+            <table>
+                <tr style="background-color: #98FB98;">
+                    <th>Item</th>
+                    <th>Price</th>
+                </tr>
+                <tr>
+                    <td>Ticket from JFK</td>
+                    <td style="background-color: pink;">$1100</td>
+                </tr>
+                <tr>
+                    <td>Hotel for 2 per night</td>
+                    <td>$150</td>
+                </tr>
+                <tr>
+                    <td>Food</td>
+                    <td>$200</td>
+                </tr>
+                <tr>
+                    <td>Attractions and Activities</td>
+                    <td>$80</td>
+                </tr>
+                <tr style="background-color: #98FB98;">
+                    <td><strong>Total Cost per day per person</strong></td>
+                    <td>$430</td>
+                </tr>
+            </table>
+        </div>
+
+        <!-- Contact Section -->
+        <br/><hr/><br/>
+        <div id="contact-section">
+            <h2>Contact Us</h2><br/>
+            <p>
+                <img class="contact-icon" src="images/logos/phone_icon.png" alt="Phone Icon">
+                Phone: 1(800)-999-9999
+            </p>
+            <p>
+                <img class="contact-icon" src="images/logos/email_icon.png" alt="Email Icon">
+                Email: <a href="mailto:info@iceland.com">info@iceland.com</a>
+            </p>
+            <p>
+                <img class="contact-icon" src="images/logos/follow_icon.png" alt="Follow Icon">
+                Follow us on Instagram
+            </p>
+        </div>
+    </main>
+
+    <!-- Footer with Bottom Navigation, gradient to bottom -->
+    <footer>
+        <nav class="bottom-nav">
+            <br/>
+            <a href="Iceland.html">Home</a> |
+            <a href="Hiking.html">Hiking</a> |
+            <a href="NorthernLights.html">Northern Lights</a> |
+            <a href="Contact.html">Contact</a>
+        </nav>
+        <br/>
+        <h6>Project 1 by Emmanoelle Aguilar</h6><br/>
+        <h6>&copy; 2025 ET710 Project 1 Website. All rights reserved.</h6>
+    </footer>
+</body>
+</html>
