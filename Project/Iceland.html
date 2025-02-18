@@ -5,7 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Iceland</title>
     <style>
-        /* Global Reset & Basic Styling */
         * {
             margin: 0;
             padding: 0;
@@ -13,32 +12,28 @@
         }
         body {
             font-family: Arial, sans-serif;
-            background: #f8f9fa; /* Subtle background color for a sleeker look */
+            background: #f8f9fa;
             margin: 0;
             padding: 0;
             text-align: center;
         }
-
-        /* Header with two images + centered heading */
         header {
             background: linear-gradient(to top, powderblue, #333);
             color: white;
             padding: 15px;
-            display: flex;               /* Use flex layout */
-            align-items: center;         /* Vertically center items */
-            justify-content: space-between; /* Left image on left, right image on right */
+            display: flex;       
+            align-items: center;
+            justify-content: space-between;
         }
         header h1 {
             margin: 0;
             text-align: center;
-            flex: 1; /* let heading expand in the middle */
+            flex: 1;
         }
         .header-img {
-            width: 80px;  /* adjust as needed */
+            width: 80px; 
             height: auto;
         }
-
-        /* Top nav */
         nav.top-nav {
             margin: 10px 0;
         }
@@ -48,30 +43,24 @@
             color: #333;
             font-weight: bold;
         }
-
-        /* Main content area */
         main {
             padding: 20px;
             max-width: 1000px;
             margin: 0 auto; 
             text-align: left; 
         }
-
-        /* Pink Container with a salmon gradient, black border, white text */
         .pink-container {
-            /* Three-stop gradient: top salmon (#e9967a), lighter salmon (#feb9a0), bottom salmon (#e9967a) */
             background: linear-gradient(to bottom, pink 0%, palevioletred 50%,  salmon 100%);
             border: 2px solid black;
             padding: 20px;
             margin-bottom: 20px;
-            color: white; /* white font color inside */
-            border-radius: 5px; /* a bit sleeker look */
-            box-shadow: 0 0 10px rgba(0,0,0,0.2); /* subtle shadow */
+            color: white;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.2);
         }
         .pink-container h2 {
             margin-top: 0;
         }
-        /* Blue border for images inside pink-container */
         .pink-container figure img {
             border: 3px solid blue;
             border-radius: 3px;
@@ -89,7 +78,6 @@
         ul.indent {
             margin-left: 40px;
         }
-        /* Table */
         table {
             margin: 1em 0;
             border-collapse: separate;
@@ -103,10 +91,9 @@
             text-align: left;
         }
         #contact-section {
-            margin-left: 40px; /* pushes content to the right */
-            margin-right: 40px; /* optional, to keep it narrower */
+            margin-left: 40px; 
+            margin-right: 40px; 
         }
-        /* Footer with gradient to bottom */
         footer {
             background: linear-gradient(to top, #333, powderblue);
             color: white;
@@ -122,20 +109,18 @@
         .contact-icon {
             width: 20px;
             height: 20px;
-            vertical-align: middle; /* aligns icon with text */
+            vertical-align: middle;
             margin-right: 5px;
         }
     </style>
 </head>
 <body>
-
-    <!-- Header with images on left & right, heading centered -->
+    <!-- Header -->
     <header>
         <img src="images/logos/left_logo.png" alt="Left Logo" class="header-img">
         <h1>Welcome to Iceland!</h1>
         <img src="images/logos/right_logo.png" alt="Right Logo" class="header-img">
     </header>
-
     <!-- Top Navigation -->
     <nav class="top-nav">
         <a href="Iceland.html">Home</a> |
@@ -143,7 +128,6 @@
         <a href="NorthernLights.html">Northern Lights</a> |
         <a href="Contact.html">Contact Us</a>
     </nav>
-
     <!-- Main Content -->
     <main>
         <div class="intro">
@@ -157,7 +141,6 @@
             </p>
             <br/>
         </div>
-
         <!-- Pink Container: Things to do -->
         <div class="pink-container">
             <h2>Things to do in Iceland</h2>
@@ -180,7 +163,6 @@
                     green streaks across the skies.
                 </p>
             </article>
-
             <article>
                 <figure>
                     <img src="images/photos/glacier_hiking.jpg" 
@@ -199,7 +181,6 @@
                 </p>
             </article>
         </div>
-
         <!-- Upcoming Events -->
         <div class="events">
             <h2>Upcoming Events</h2>
@@ -209,7 +190,6 @@
                 <li><a href="">Laugavegur Ultra Marathon</a></li>
             </ul>
         </div>
-
         <!-- Newsfeed -->
         <br/><hr/><br/>
         <div class="newsfeed">
@@ -232,7 +212,6 @@
                 Ólafsson also has a small part in End of Sentence.
             </p>
         </div>
-
         <!-- Table for trip cost -->
         <br/><hr/><br/>
         <div class="trip-cost">
@@ -264,7 +243,6 @@
                 </tr>
             </table>
         </div>
-
         <!-- Contact Section -->
         <br/><hr/><br/>
         <div id="contact-section">
@@ -283,8 +261,7 @@
             </p>
         </div>
     </main>
-
-    <!-- Footer with Bottom Navigation, gradient to bottom -->
+    <!-- Footer with Bottom Navigation-->
     <footer>
         <nav class="bottom-nav">
             <br/>
