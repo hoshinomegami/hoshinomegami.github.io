@@ -1,0 +1,42 @@
+html, body {
+  margin: 0;
+  padding: 0;
+}
+.container {
+  max-width: 1200px;
+  display: grid;
+  grid-template-columns: 50% 60%;
+  row-gap: 55px;       
+  margin: 30px auto;
+  padding: 30px;
+  justify-items: center;
+}
+.card {
+  background-color: #b3ffb3; 
+  border: 3px solid red;    
+  border-radius: 5px;
+  text-align: center;
+  padding: 3px 100px 30px 100px; 
+  max-width: 900px;
+}
+.card img {
+  max-width: 400px;
+  height: auto;
+  border-radius: 4px;
+  margin-bottom: 10px;
+}
+.card h1 {
+  margin: 20px 0;
+}
+.filtered1 {
+  filter: sepia(70%);
+}
+.filtered2 {
+  filter: blur(2px);
+}
+.filtered3 {
+  filter: grayscale(100%);
+}
+.filtered4 {
+  filter: saturate(2);
+}
