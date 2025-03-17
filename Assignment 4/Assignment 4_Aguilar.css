@@ -1,0 +1,87 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    font-family: 'Times New Roman', serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f8f8f8;
+}
+.container {
+    display: flex;
+    width: 90%;
+    max-width: 1200px;
+}
+.menu {
+    width: 30%;
+    padding: 15px;
+}
+.menu ul {
+    list-style: none;
+    padding: 0;
+}
+.menu li {
+    color: white;
+    padding:25px;
+    text-align: center;
+    font-size: 18px;
+    background: #b0dfe5;
+    cursor: pointer;
+    width: 100%;
+    display: block;
+}
+.menu .active {
+    background: red;
+    color: white;
+}
+.content {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 25px;
+    width: 100%;
+    padding: 10px;
+}
+.box {
+    background: white;
+    padding: 15px;
+    border: 2px solid red;
+    text-align: center;
+}
+.box img {
+    width: 100%;
+    height: auto;
+    border-radius: 5px;
+}
+.box:first-child, .box:last-child {
+    background-size: cover;
+    background-position: center;
+    box-shadow: 5px 5px 15px #fba810;
+    border-radius: 10px;
+    height: 300px;
+}
+.box:first-child {
+    background-image: url('images/buildings.jpeg');
+}
+.box:last-child {
+    background-image: url('images/nyccar.jpg');
+}
+.box:nth-child(2), .box:nth-child(3) {
+    box-shadow: 5px 5px 5px red;
+}
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+        align-items: center;
+    }
+    .menu {
+        width: 100%;
+    }
+    .content {
+        grid-template-columns: 1fr;
+        width: 100%;
+    }
+}
