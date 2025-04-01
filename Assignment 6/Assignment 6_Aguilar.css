@@ -1,0 +1,219 @@
+/* Root Theme Variables */
+:root {
+    --bg: #f9f9f9;
+    --text: #333;
+    --product-bg: #fff;
+    --modal-bg: #ffeef0;
+    --modal-head: pink;
+    --modal-text-bg: #ffb74d;
+  }
+  /* Dark Mode (pure CSS using :has) */
+  body:has(#theme-switch:checked) {
+    --bg: #1e1e1e;
+    --text: #f0f0f0;
+    --product-bg: #2a2a2a;
+    --modal-bg: #333;
+    --modal-head: #444;
+    --modal-text-bg: #555;
+  }
+  /* Reset & Base Styling */
+  * {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+    transition: background-color 0.4s ease, color 0.4s ease;
+  }
+  body {
+    background-color: var(--bg);
+    color: var(--text);
+    padding: 2rem;
+  }
+  /* Navigation Bar */
+  .navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--product-bg);
+    padding: 1rem 2rem;
+    margin-bottom: 2rem;
+    border-radius: 12px;
+    box-shadow: 0 2px 12px rgba(0, 0, 0, 0.05);
+  }
+  /* Dark Mode Toggle Switch */
+  .toggle-switch {
+    position: relative;
+    display: inline-block;
+    width: 50px;
+    height: 26px;
+  }
+  .toggle-switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+  }
+  .slider {
+    position: absolute;
+    cursor: pointer;
+    background-color: #ccc;
+    border-radius: 34px;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    transition: 0.4s;
+  }
+  .slider:before {
+    content: "";
+    position: absolute;
+    height: 20px;
+    width: 20px;
+    left: 4px;
+    bottom: 3px;
+    background-color: white;
+    border-radius: 50%;
+    transition: 0.4s;
+  }
+  .toggle-switch input:checked + .slider {
+    background-color: #2196f3;
+  }
+  .toggle-switch input:checked + .slider:before {
+    transform: translateX(24px);
+  }
+  /* Product Grid */
+  .container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 2rem;
+  }
+  .product {
+    flex: 1 1 48%;
+    max-width: 48%;
+    border: 2px solid #ccc;
+    border-radius: 12px;
+    padding: 2rem;
+    background: var(--product-bg);
+    box-shadow: 0 8px 24px rgba(255, 0, 0, 0.7);
+    text-align: center;
+    transition: box-shadow 0.3s ease;
+  }
+  .product img {
+    width: 100%;
+    border-radius: 8px;
+    margin-bottom: 1rem;
+  }
+  .product p {
+    margin-bottom: 1rem;
+    font-size: 1rem;
+  }
+  .open-modal {
+    background-color: #ffa500;
+    color: white;
+    padding: 0.6rem 1.5rem;
+    text-decoration: none;
+    border-radius: 8px;
+    display: inline-block;
+    transition: background-color 0.3s ease;
+  }
+  .open-modal:hover {
+    background-color: #e69500;
+  }
+  /* Modal Overlay (static) */
+  .modal {
+    pointer-events: none;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    position: fixed;
+    z-index: 10;
+    left: 0;
+    top: 0;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    backdrop-filter: blur(3px);
+  }
+  .modal:target {
+    pointer-events: auto;
+    opacity: 1;
+  }
+  /* Modal Background Overlays */
+  .modal.blue { background-color: rgba(0, 102, 204, 0.6); }
+  .modal.green { background-color: rgba(0, 128, 0, 0.6); }
+  .modal.purple { background-color: rgba(138, 43, 226, 0.6); }
+  .modal.orange { background-color: rgba(255, 165, 0, 0.6); }
+  /* Modal Content Animation Only */
+  .modal-content {
+    background-color: var(--modal-bg);
+    padding: 2rem;
+    border-radius: 12px;
+    max-width: 520px;
+    width: 88%;
+    text-align: center;
+    position: relative;
+    box-sizing: border-box;
+    overflow-wrap: break-word;
+    transform: scale(0.9);
+    opacity: 0;
+    transition: all 0.4s ease;
+  }
+  /* Animate content when modal is active */
+  .modal:target .modal-content {
+    transform: scale(1);
+    opacity: 1;
+  }
+  .modal-content h2 {
+    background-color: var(--modal-head);
+    padding: 1rem;
+    border-radius: 6px;
+    margin-bottom: 1.2rem;
+    font-size: 1.7rem;
+  }
+  .modal-content p {
+    background-color: var(--modal-text-bg);
+    padding: 1rem;
+    border-radius: 6px;
+    margin-bottom: 1.4rem;
+    font-size: 1.05rem;
+  }
+  .modal-content img {
+    width: 100%;
+    max-width: 400px;
+    height: auto;
+    border-radius: 10px;
+  }
+  .close {
+    position: absolute;
+    top: 8px;
+    right: 15px;
+    font-size: 24px;
+    color: var(--text);
+    text-decoration: none;
+    font-weight: bold;
+  }
+  /* Responsive */
+  @media (max-width: 768px) {
+    .product {
+      flex: 1 1 100%;
+      max-width: 100%;
+    }
+    .modal-content {
+      padding: 1.5rem;
+      max-width: 95%;
+    }
+    .modal-content h2 {
+      font-size: 1.5rem;
+      padding: 0.8rem;
+    }
+    .modal-content p {
+      font-size: 1rem;
+      padding: 1rem;
+    }
+    .modal-content img {
+      max-width: 100%;
+      height: auto;
+    }
+  }
+  

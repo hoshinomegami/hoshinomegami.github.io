@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Assignment 6</title>
+  <link rel="stylesheet" href="Assignment 6_Aguilar.css"/>
+</head>
+<body>
+    <!-- Navigation Bar with Checkbox Toggle -->
+    <header class="navbar">
+        <h1>My Product Gallery—Toggle for dark mode! ➡️</h1>
+        <label class="toggle-switch">
+        <input type="checkbox" id="theme-switch" />
+        <span class="slider"></span>
+        </label>
+    </header>
+
+  <main class="container">
+    <div class="product">
+      <img src="images/product1.jpeg" alt="Colorful dried fruits"/>
+      <p>Colorful Dried Fruits</p>
+      <a href="#modal1" class="open-modal">Open modal Link</a>
+    </div>
+
+    <div class="product">
+      <img src="images/product2.jpeg" alt="Snack mix in bowl"/>
+      <p>Snack Mix in a Bowl</p>
+      <a href="#modal2" class="open-modal">Open modal Link II</a>
+    </div>
+
+    <div class="product">
+      <img src="images/product3.jpg" alt="Chocolate truffles"/>
+      <p>Chocolate Truffles</p>
+      <a href="#modal3" class="open-modal">Open modal Link III</a>
+    </div>
+
+    <div class="product">
+      <img src="images/product4.jpg" alt="Fruit smoothie jars"/>
+      <p>Fruit Smoothie Jars</p>
+      <a href="#modal4" class="open-modal">Open modal Link IV</a>
+    </div>
+  </main>
+
+  <!-- Modal Windows -->
+  <div id="modal1" class="modal blue">
+    <div class="modal-content" role="dialog" aria-modal="true" aria-labelledby="modal1-title">
+      <h2 id="modal1-title">Modal Window One</h2>
+      <p>This is a paragraph in the message window.</p>
+      <img src="images/modalimage1.webp" alt="Dried Fruit Gift Box"/>
+      <a href="#" class="close" aria-label="Close modal">×</a>
+    </div>
+  </div>
+
+  <div id="modal2" class="modal green">
+    <div class="modal-content" role="dialog" aria-modal="true" aria-labelledby="modal2-title">
+      <h2 id="modal2-title">Modal Window Two</h2>
+      <p>This is a paragraph in the message window.</p>
+      <img src="images/modalimage2.jpg" alt="Original Chex Party Mix"/>
+      <a href="#" class="close" aria-label="Close modal">×</a>
+    </div>
+  </div>
+
+  <div id="modal3" class="modal purple">
+    <div class="modal-content" role="dialog" aria-modal="true" aria-labelledby="modal3-title">
+      <h2 id="modal3-title">Modal Window Three</h2>
+      <p>This is a paragraph in the message window.</p>
+      <img src="images/modalimage3.png" alt="Homemade Chocolate Truffles"/>
+      <a href="#" class="close" aria-label="Close modal">×</a>
+    </div>
+  </div>
+
+  <div id="modal4" class="modal orange">
+    <div class="modal-content" role="dialog" aria-modal="true" aria-labelledby="modal4-title">
+      <h2 id="modal4-title">Modal Window Four</h2>
+      <p>This is a paragraph in the message window.</p>
+      <img src="images/modalimage4.jpg" alt="Fruit Salad Smoothie"/>
+      <a href="#" class="close" aria-label="Close modal">×</a>
+    </div>
+  </div>
+</body>
+</html>
