@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Quiz-Cat or Dog</title>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      text-align: center;
+      margin-top: 50px;
+    }
+    .animal {
+      display: inline-block;
+      margin: 0 40px;
+      cursor: pointer;
+    }
+    .animal img {
+      width: 300px;
+      height: auto;
+      border: 3px solid #ccc;
+      border-radius: 10px;
+      transition: transform 0.3s;
+    }
+    .animal img:hover {
+      transform: scale(1.05);
+    }
+    #message {
+      margin-top: 30px;
+      font-size: 24px;
+      color: #333;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="animal" id="cat">
+    <img src="cat.gif" alt="Cat">
+  </div>
+
+  <div class="animal" id="dog">
+    <img src="dog.gif" alt="Dog">
+  </div>
+
+  <div id="message"></div>
+
+  <!-- Audio elements -->
+  <audio id="catSound" src="cat-meowing.mp3"></audio>
+  <audio id="dogSound" src="dog-bark.mp3"></audio>
+
+  <script>
+    $(document).ready(function () {
+      $('#cat').click(function () {
+        $('#catSound')[0].play();
+        $('#message').text('That is a CAT');
+      });
+
+      $('#dog').click(function () {
+        $('#dogSound')[0].play();
+        $('#message').text('That is a DOG');
+      });
+    });
+  </script>
+
+</body>
+</html>
