@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Project 2</title>
+  <link rel="stylesheet" href="style.css"/>
+  <script src="main.js" defer></script>
+</head>
+<body>
+  <!-- HEADER -->
+    <header class="main-header">
+      <img src="images/logo.png" alt="Josefina Logo" class="logo" />
+      <div class="title-block">
+        <h1 class="animated-title">Josefina Body Care Collection</h1>
+        <h2 class="animated-subtitle">Naturally Beautiful, Elegantly You</h2>
+      </div>
+    </header>
+
+  <!-- TOP NAV & FLOATING BUTTONS -->
+    <nav class="top-nav">
+      <a href="#signature">Our Signature Collection</a>
+      <a href="#gifts">Exclusive Gift Sets</a>
+      <a href="javascript:void(0)" onclick="showCart()">View Bag</a>
+    </nav>
+    <div class="floating-buttons">
+      <button id="scrollToTop" title="Back to Top">⬆</button>
+      <a href="javascript:void(0)" title="View Bag" class="bag-btn" onclick="showCart()">👜</a>
+    </div>
+
+  <!-- SLIDESHOW -->
+    <section class="slideshow">
+      <div class="slides fade">
+        <img src="images/intro_img2.jpg" alt="Intro Slide 1" />
+      </div>
+      <div class="slides fade">
+        <img src="images/woman.jpg" alt="Intro Slide 2" />
+      </div>
+      <div class="slides fade">
+        <img src="images/girl.jpg" alt="Intro Slide 3" />
+      </div>
+      <div class="slideshow-text-box" id="slideshowTextBox">
+        <h3 id="slideshowHeadline">Glow from within with our botanical blends.</h3>
+      </div>
+      <div class="carousel-nav">
+        <button id="prevSlide">&#10094;</button>
+        <button id="nextSlide">&#10095;</button>
+      </div>
+      <div class="promo-bar" id="promoBar">
+        <p id="promoText">Use code <strong>GLOW20</strong> for 20% off!</p>
+      </div>
+    </section>
+  <!-- 2x1 LAYOUT FEATURE BLOCK -->
+    <section class="two-column-feature">
+      <div class="feature-image-box">
+        <div class="feature-image-text">
+          Unique blend boasting antioxidants, vitamin E and the brightening Camellia extract.
+        </div>
+      </div>
+      <div class="feature-text-box">
+        <h3><em>Strengthen Your Skin</em></h3>
+        <p>
+          Special technology makes this whipped cream easy to apply while its rich and velvety formulation nourishes your skin. 
+          Enriched with nourishing rice milk and a flowery fragrance of cherry blossom.
+        </p>
+      </div>
+    </section>
+
+  <!-- SIGNATURE COLLECTION -->
+    <section class="products" id="signature">
+      <h2 class="section-title">Our Signature Collection</h2>
+      <hr/>
+      <div class="product-grid">
+        <div class="product-card">
+          <img src="images/item1.png" alt="Cherry Blossom Hand Lotion" />
+          <h4>The Ritual of Sakura</h4>
+          <h3>Cherry Blossom Hand Lotion</h3>
+          <h5>Hand Lotion, 70 mL</h5>
+          <p>$12.50</p>
+          <div class="btn-pair">
+            <button class="add-to-bag" onclick="confirmAddToCart('The Ritual of Sakura: Cherry Blossom Hand Lotion', 12.50)">ADD TO BAG</button>
+            <button class="info-btn" title="View Item Description"
+              onclick="openDescriptionModal('images/item1.png', 'The Ritual of Sakura: Cherry Blossom Hand Lotion', 'A soothing balm infused with calming sakura oil.', 12.50)">?</button>
+          </div>
+        </div>
+        <div class="product-card">
+          <img src="images/item2.png" alt="Himalayan Honey Body Cream" />
+          <h4>The Ritual of Ayurveda</h4>
+          <h3>Himalayan Honey Body Cream</h3>
+          <h5>Body Cream, 70 mL</h5>
+          <p>$7.50</p>
+          <div class="btn-pair">
+            <button class="add-to-bag" onclick="confirmAddToCart('The Ritual of Ayurveda: Himalayan Honey Body Cream', 7.50)">ADD TO BAG</button>
+            <button class="info-btn" title="View Item Description"
+              onclick="openDescriptionModal('images/item2.png', 'The Ritual of Ayurveda: Himalayan Honey Body Cream', 'Gentle exfoliation using real Himalayan Honey for radiant skin.', 7.50)">?</button>
+          </div>
+        </div>
+        <div class="product-card">
+          <img src="images/item3.png" alt="Organic Rice Milk Body Cream" />
+          <h4>The Ritual of Sakura</h4>
+          <h3>Organic Rice Milk Body Cream</h3>
+          <h5>Body Cream, 70 mL</h5>
+          <p>$7.50</p>
+          <div class="btn-pair">
+            <button class="add-to-bag" onclick="confirmAddToCart('The Ritual of Sakura: Organic Rice Milk Body Cream', 7.50)">ADD TO BAG</button>
+            <button class="info-btn" title="View Item Description"
+              onclick="openDescriptionModal('images/item3.png', 'The Ritual of Sakura: Organic Rice Milk Body Cream', 'Rich milk made with organic Japanese rice for deep hydration.', 7.50)">?</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  <!-- GIFT SETS -->
+    <section class="gift-sets" id="gifts">
+      <h2 class="section-title">Exclusive Gift Sets</h2>
+      <hr/>
+      <div class="product-grid">
+        <div class="product-card">
+          <img src="images/gift_set1.png" alt="The Ritual of Ayurveda Gift Set" />
+          <h3>The Ritual of Ayurveda Gift Set</h3>
+          <h5>Gift Set, 4 Items</h5>
+          <p>$49.99</p>
+          <div class="btn-pair">
+            <button class="add-to-bag" onclick="confirmAddToCart('The Ritual of Ayurveda Gift Set', 49.99)">ADD TO BAG</button>
+            <button class="info-btn" title="View Item Description"
+              onclick="openDescriptionModal('images/gift_set1.png', 'The Ritual of Ayurveda Gift Set', 'A soothing selection designed to melt stress and refresh your senses.', 49.99)">?</button>
+          </div>
+        </div>
+        <div class="product-card">
+          <img src="images/gift_set2.png" alt="The Ritual of Sakura Gift Set" />
+          <h3>The Ritual of Sakura Gift Set</h3>
+          <h5>Gift Set, 4 Items</h5>
+          <p>$54.99</p>
+          <div class="btn-pair">
+            <button class="add-to-bag" onclick="confirmAddToCart('The Ritual of Sakura Gift Set', 54.99)">ADD TO BAG</button>
+            <button class="info-btn" title="View Item Description"
+              onclick="openDescriptionModal('images/gift_set2.png', 'The Ritual of Sakura Gift Set', 'Capture joy with this indulgent collection of skin-pampering essentials.', 54.99)">?</button>
+          </div>
+        </div>
+        <div class="product-card">
+          <img src="images/gift_set3.png" alt="The Ritual of Karma Gift Set" />
+          <h3>The Ritual of Karma Gift Set</h3>
+          <h5>Gift Set, 4 Items</h5>
+          <p>$59.99</p>
+          <div class="btn-pair">
+            <button class="add-to-bag" onclick="confirmAddToCart('The Ritual of Karma Gift Set', 59.99)">ADD TO BAG</button>
+            <button class="info-btn" title="View Item Description"
+              onclick="openDescriptionModal('images/gift_set3.png', 'The Ritual of Karma Gift Set', 'A limited edition of products to brighten and hydrate your skin daily.', 59.99)">?</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  <!-- DESCRIPTION MODAL -->
+    <div id="desc-modal" class="modal">
+      <div class="modal-content desc-modal-content">
+        <span class="close" onclick="document.getElementById('desc-modal').style.display='none'">&times;</span>
+        <div class="desc-body">
+          <img id="desc-img" src="" alt="Product Image" />
+          <div>
+            <h3 id="desc-title"></h3>
+            <p id="desc-text"></p>
+          </div>
+        </div>
+        <div class="modal-footer">
+          <p>Our handcrafted ingredients deliver glowing results. 🌿</p>
+          <div class="qty-action">
+            <label for="desc-qty">Qty:</label>
+            <input id="desc-qty" type="number" value="1" min="1" />
+            <button class="add-to-bag" onclick="confirmAddToCart()">ADD TO BAG</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  <!-- CART MODAL -->
+    <div id="cart-modal" class="modal">
+      <div class="modal-content">
+        <span class="close" onclick="document.getElementById('cart-modal').style.display='none'">&times;</span>
+        <h3>Your Bag</h3>
+        <div id="cart-items"></div>
+        <p id="cart-total">Total: $0.00</p>
+        <button class="proceed-checkout" onclick="proceedToCheckout()">Proceed to Checkout</button>
+      </div>
+    </div>
+
+  <!-- FOOTER -->
+    <footer class="site-footer">
+      <div class="footer-grid">
+        <div>
+          <h4>HELP</h4>
+          <ul>
+            <li><a href="#">FAQs</a></li>
+            <li><a href="#">Shipping</a></li>
+            <li><a href="#">Returns</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>ACCOUNT</h4>
+          <ul>
+            <li><a href="#">My Account</a></li>
+            <li><a href="#">Order History</a></li>
+            <li><a href="#">Track Order</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>SUBSCRIBE</h4>
+          <p>Get updates on promotions and new arrivals.</p>
+        </div>
+        <div>
+          <h4>MEMBER CARE</h4>
+          <ul>
+            <li><a href="#">Contact Us</a></li>
+            <li><a href="#">Support</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="socials">
+        <a href="#"><img src="images/icons/facebook.png" alt="Facebook"></a>
+        <a href="#"><img src="images/icons/instagram.png" alt="Instagram"></a>
+        <a href="#"><img src="images/icons/twitter.png" alt="Twitter"></a>
+        <a href="#"><img src="images/icons/youtube.png" alt="YouTube"></a>
+        <a href="#"><img src="images/icons/pin.png" alt="Pinterest"></a>
+      </div>
+      <p class="footer-credit">Project 2 by Emma Aguilar  |  &copy; 2025 ET710 Project 2 Website. All rights reserved.</p>
+    </footer>
+  </body>
+</html>
+
