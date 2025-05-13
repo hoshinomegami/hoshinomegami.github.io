@@ -314,7 +314,9 @@ hr {
   border: none;
   cursor: pointer;
 }
-.add-to-bag:hover,
+.add-to-bag:hover {
+  background: grey;
+}
 .proceed-checkout:hover {
   background: #444;
 }
