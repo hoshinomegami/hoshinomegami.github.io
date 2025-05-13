@@ -58,7 +58,7 @@ const cart = [];
 let currentModalItem = { name: "", price: 0 };
 
 function openDescriptionModal(img, title, desc, price) {
-  currentModalItem = { name: title, price };
+  let currentModalItem = { name: title, price };
 
   document.getElementById("desc-img").src = img;
   document.getElementById("desc-title").textContent = title;
@@ -67,7 +67,9 @@ function openDescriptionModal(img, title, desc, price) {
   document.getElementById("desc-modal").style.display = "flex";
 
   const addBtn = document.getElementById("desc-add");
+  addBtn.onclick = null;
   addBtn.onclick = () => {
+	console.log("Current modal item:", currentModalItem);
     const qty = parseInt(document.getElementById("desc-qty").value) || 1;
     confirmAddToCart(currentModalItem.name, currentModalItem.price, qty);
     document.getElementById("desc-modal").style.display = "none";
