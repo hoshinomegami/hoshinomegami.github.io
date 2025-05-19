@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Final Exam</title>
+  <link rel="stylesheet" href="style.css" />
+  <!-- Bootstrap CDN -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+  <h1>Emma Aguilar | Emmanoelle.Aguilar54@student.qcc.cuny.edu</h1>
+  <hr />
+  <h2>Final Exam</h2>
+
+<!-- Multiple Choice -->
+  <h1>1. A</h1>
+  <h1>2. C</h1>
+  <h1>3. E</h1>
+  <h1>4. A, B, D, E</h1>
+  <h1>5. A, B, C</h1>
+  <h1>6. C</h1>
+  <h1>7. B, D, E, F</h1>
+  <h1>8. B, C, D</h1>
+  <h1>9. B</h1>
+  <h1>10. D</h1>
+
+<!-- Question 11 -->
+  <h2>Q11.</h2>
+  <div class="hero">
+    <div class="top-bar d-flex justify-content-between align-items-start p-3">
+      <div class="studio-label">Studio</div>
+      <div class="menu-toggle" onclick="toggleTabs()">&#9776;</div>
+    </div>
+    <div class="hero-text text-center">
+      <h1>New York City</h1>
+      <a href="#" class="explore-link">Explore Events</a>
+    </div>
+    <div id="tabs" class="tabs-container d-none">
+      <div class="tab bg-light p-3 border text-dark">Tab 1 Content</div>
+      <div class="tab bg-light p-3 border mt-2 text-dark">Tab 2 Content</div>
+    </div>
+  </div>
+
+<!-- Question 12 -->
+    <h2>Q12.</h2>
+<!-- Main (demo-accurate) forward bounce -->
+    <div class="bounce-container">
+    <div class="ball"></div>
+    </div>
+<!-- Additional: I did this one before I saw what its supposed to look like on Zoom -->
+    <div class="bounce-container additional">
+    <p class="note">Additional Example: Vertical bounce with squish and stretch (principle of animation)</p>
+    <div class="ball-alt"></div>
+    </div>
+
+
+<!-- Question 13 -->
+  <h2>Q13.</h2>
+  <div class="container py-5">
+    <div class="row g-4">
+      <div class="col-12 col-md-4">
+        <div class="custom-card text-center p-3">
+          <h5>Title 1</h5>
+          <img src="basketball.webp" alt="Basketball" class="img-fluid">
+          <button class="custom-btn mt-3">basketball-1</button>
+        </div>
+      </div>
+      <div class="col-12 col-md-4">
+        <div class="custom-card text-center p-3">
+          <h5>Title 2</h5>
+          <img src="football.webp" alt="Football" class="img-fluid">
+          <button class="custom-btn mt-3">basketball-2</button>
+        </div>
+      </div>
+      <div class="col-12 col-md-4">
+        <div class="custom-card text-center p-3">
+          <h5>Title 3</h5>
+          <img src="soccerball.webp" alt="Soccerball" class="img-fluid">
+          <button class="custom-btn mt-3">basketball-3</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+<!-- Question 14 -->
+    <h2>Q14.</h2>
+    <div class="container-fluid p-5 bg-gradient">
+    <div class="row g-4 justify-content-center">
+        <div class="col-12 col-md-3">
+        <div class="product-card text-center product1">
+            <img src="football.webp" class="img-fluid mb-2">
+            <h5>Product 1</h5>
+            <p>description 1</p>
+            <a href="#">link3</a><br>
+            <button class="btn btn-info mt-2" data-bs-toggle="modal" data-bs-target="#productModal1">check more</button>
+        </div>
+        </div>
+        <div class="col-12 col-md-3">
+        <div class="product-card text-center product2">
+            <img src="basketball.webp" class="img-fluid mb-2">
+            <h5>Product 2</h5>
+            <p>description 2</p>
+            <a href="#">link2</a><br>
+            <button class="btn btn-danger mt-2" data-bs-toggle="modal" data-bs-target="#productModal2">check more</button>
+        </div>
+        </div>
+        <div class="col-12 col-md-3">
+        <div class="product-card text-center product3">
+            <img src="soccerball.webp" class="img-fluid mb-2">
+            <h5>Product 3</h5>
+            <p>description 3</p>
+            <a href="#">link3</a><br>
+            <button class="btn btn-info mt-2" data-bs-toggle="modal" data-bs-target="#productModal3">check more</button>
+        </div>
+        </div>
+        <div class="col-12 col-md-3">
+        <div class="product-card text-center product4">
+            <img src="tennisball.webp" class="img-fluid mb-2">
+            <h5>Product 4</h5>
+            <p>description 4</p>
+            <a href="#">link4</a><br>
+            <button class="btn btn-danger mt-2" data-bs-toggle="modal" data-bs-target="#productModal4">check more</button>
+        </div>
+        </div>
+    </div>
+    </div>
+
+    <!-- Q14 MODALS -->
+    <div class="modal fade" id="productModal1" tabindex="-1">
+    <div class="modal-dialog">
+        <div class="modal-content">
+        <div class="modal-header bg-warning">
+            <h5 class="modal-title">BS modal window title1</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+        </div>
+        <div class="modal-body text-center">
+            <p>BS modal window text1</p>
+            <img src="football.webp" class="img-fluid">
+        </div>
+        <div class="modal-footer">
+            <small>This is a modal footer</small>
+        </div>
+        </div>
+    </div>
+    </div>
+
+    <div class="modal fade" id="productModal2" tabindex="-1">
+    <div class="modal-dialog">
+        <div class="modal-content">
+        <div class="modal-header bg-warning">
+            <h5 class="modal-title">BS modal window title2</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+        </div>
+        <div class="modal-body text-center">
+            <p>BS modal window text2</p>
+            <img src="basketball.webp" class="img-fluid">
+        </div>
+        <div class="modal-footer">
+            <small>This is a modal footer</small>
+        </div>
+        </div>
+    </div>
+    </div>
+
+    <div class="modal fade" id="productModal3" tabindex="-1">
+    <div class="modal-dialog">
+        <div class="modal-content">
+        <div class="modal-header bg-warning">
+            <h5 class="modal-title">BS modal window title3</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+        </div>
+        <div class="modal-body text-center">
+            <p>BS modal window text3</p>
+            <img src="soccerball.webp" class="img-fluid">
+        </div>
+        <div class="modal-footer">
+            <small>This is a modal footer</small>
+        </div>
+        </div>
+    </div>
+    </div>
+
+    <div class="modal fade" id="productModal4" tabindex="-1">
+    <div class="modal-dialog">
+        <div class="modal-content">
+        <div class="modal-header bg-warning">
+            <h5 class="modal-title">BS modal window title4</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+        </div>
+        <div class="modal-body text-center">
+            <p>BS modal window text4</p>
+            <img src="tennisball.webp" class="img-fluid">
+        </div>
+        <div class="modal-footer">
+            <small>This is a modal footer</small>
+        </div>
+        </div>
+    </div>
+    </div>
+
+<!-- Question 15 -->
+  <h2>Q15.</h2>
+  <div class="nyc-block">
+    <div class="title">NYC Event</div>
+    <img src="nyc.jpg" alt="NYC Image" class="nyc-image" />
+    <div class="form-section">
+      <p>Would you like to learn more about upcoming event in NYC?</p>
+      <select id="userChoice">
+        <option value="yes">Yes</option>
+        <option value="no">No</option>
+      </select>
+      <br>
+      <button onclick="handleSubmit()">submit</button>
+      <p id="output" class="response-text"></p>
+    </div>
+  </div>
+
+<!-- Scripts -->
+  <script>
+    function toggleTabs() {
+      document.getElementById("tabs").classList.toggle("d-none");
+    }
+
+    function handleSubmit() {
+      const choice = document.getElementById("userChoice").value;
+      const output = document.getElementById("output");
+      if (choice === "yes") {
+        output.textContent = "Pizza night every Saturday night at 7PM - Pier 88";
+      } else {
+        output.textContent = "Thank you!";
+      }
+    }
+  </script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

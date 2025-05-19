@@ -1,0 +1,246 @@
+/* Q11 - Hero Section */
+.hero {
+  position: relative;
+  background-image: url('nyc.jpg');
+  background-size: cover;
+  background-position: center;
+  min-height: 400px; 
+  color: #fff;
+  padding-bottom: 40px; 
+}
+.top-bar {
+  position: absolute;
+  top: 0;
+  width: 100%;
+}
+.studio-label {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: black;
+}
+.menu-toggle {
+  font-size: 1.5rem;
+  background: rgba(255, 255, 255, 0.8);
+  padding: 5px 10px;
+  cursor: pointer;
+  border-radius: 4px;
+}
+.hero-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: rgba(255, 255, 255, 0.6);
+  padding: 20px;
+  border-radius: 6px;
+  color: black;
+}
+.explore-link {
+  display: block;
+  margin-top: 10px;
+  color: #007bff;
+  text-decoration: none;
+}
+.tabs-container {
+  margin-top: 20px;
+  width: 80%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Q12 - Bouncing Ball */
+.bounce-container {
+  width: 100%;
+  height: 400px;
+  border: 3px solid #a8ff00;
+  border-radius: 10px;
+  background: linear-gradient(to right, #33cccc, #996666);
+  position: relative;
+  overflow: hidden;
+  margin-bottom: 40px;
+}
+    /* Main bouncing ball */
+.ball {
+  width: 80px;
+  height: 80px;
+  background-image: url('ball.webp');
+  background-size: cover;
+  background-position: center;
+  position: absolute;
+  top: 80%;
+  left: 5%;
+  transform: translate(-50%, -50%);
+  animation: diagonalBounce 5s infinite ease-in-out;
+  transform-origin: center;
+}
+@keyframes diagonalBounce {
+  0% {
+    top: 80%;
+    left: 5%;
+    transform: translate(-50%, -50%) scale(1);
+    background-image: url('ball.webp');
+  }
+  20% {
+    top: 10%;
+    left: 50%;
+    transform: translate(-50%, -50%) scaleX(1.2) scaleY(0.8);
+    background-image: url('ball2.png');
+  }
+  40% {
+    top: 80%;
+    left: 95%;
+    transform: translate(-50%, -50%) scaleX(0.8) scaleY(1.2);
+    background-image: url('ball3.png');
+  }
+  60% {
+    top: 10%;
+    left: 50%;
+    transform: translate(-50%, -50%) scaleX(1.2) scaleY(0.8);
+    background-image: url('ball2.png');
+  }
+  80% {
+    top: 80%;
+    left: 5%;
+    transform: translate(-50%, -50%) scale(1);
+    background-image: url('ball.webp');
+  }
+  100% {
+    top: 80%;
+    left: 5%;
+    transform: translate(-50%, -50%) scale(1);
+    background-image: url('ball.webp');
+  }
+}
+    /* Additional ball */
+.bounce-container.additional {
+  background: linear-gradient(to right, #f9f9f9, #e0e0e0);
+}
+    /* Label for additional ball */
+.note {
+  text-align: center;
+  font-style: italic;
+  margin-bottom: 10px;
+  color: #555;
+}
+    /* Additional ball bounce with squash&stretch */
+.ball-alt {
+  width: 80px;
+  height: 80px;
+  background-image: url('ball.webp');
+  background-size: cover;
+  background-position: center;
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  animation: verticalBounce 1.5s infinite ease-in-out;
+  transform-origin: bottom center;
+}
+@keyframes verticalBounce {
+  0%, 100% {
+    bottom: 0;
+    transform: translateX(-50%) scaleY(0.8) scaleX(1.2); /* squish at bottom */
+  }
+  25% {
+    transform: translateX(-50%) scale(1.1, 0.9); /* easing out */
+  }
+  50% {
+    bottom: 250px;
+    transform: translateX(-50%) scaleY(1.2) scaleX(0.9); /* stretch at top */
+  }
+  75% {
+    transform: translateX(-50%) scale(1.05, 0.95); /* falling */
+  }
+}
+
+/* Q13 - Custom Cards */
+.custom-card {
+  border: 2px solid hotpink;
+  border-radius: 10px;
+  box-shadow: 0 5px 10px orange;
+  background-color: #fff;
+  transition: transform 0.3s;
+}
+.custom-card:hover {
+  transform: translateY(-5px);
+}
+.custom-btn {
+  background-color: #fff0f5;
+  border: 1px solid pink;
+  color: black;
+  padding: 5px 10px;
+  border-radius: 8px;
+  font-size: 0.9rem;
+}
+
+/* Q14 - Hover and Modal Styling */
+.product-card {
+  border: 1px solid #ccc;
+  padding: 20px;
+  border-radius: 10px;
+  background-color: white;
+  transition: all 0.3s ease;
+  box-shadow: 0 5px 10px rgba(0,0,0,0.1);
+}
+.product-card:hover {
+  background-color: #dcdcdc;
+  opacity: 0.95;
+  transform: translateY(-5px);
+}
+.product-card img {
+  transition: transform 0.3s ease;
+}
+.product-card:hover img {
+  transform: scale(1.05);
+}
+.product-card h5,
+.product-card p,
+.product-card a,
+.product-card button {
+  transition: opacity 0.3s;
+}
+.product-card:hover h5,
+.product-card:hover p,
+.product-card:hover a,
+.product-card:hover button {
+  opacity: 0.9;
+}
+    /* Modal stuff */
+.modal-header.bg-warning {
+  background-color: #ffc107;
+  color: black;
+  font-weight: bold;
+}
+.modal-footer small {
+  font-style: italic;
+  color: #555;
+}
+
+/* Q15 - NYC Event Interaction */
+.nyc-block {
+  max-width: 600px;
+  margin: 40px auto;
+  border: 2px solid #ffc107;
+  background-color: #fdbf00;
+  text-align: center;
+  font-family: Arial, sans-serif;
+}
+.title {
+  background-color: #ffc107;
+  font-size: 2rem;
+  font-weight: bold;
+  padding: 10px;
+}
+.nyc-image {
+  width: 100%;
+  height: auto;
+}
+.form-section {
+  padding: 20px;
+}
+.response-text {
+  margin-top: 15px;
+  background-color: pink;
+  padding: 10px;
+  font-weight: bold;
+}
